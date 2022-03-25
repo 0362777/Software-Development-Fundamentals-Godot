@@ -14,3 +14,7 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print ("Game Over")
+func _process(delta):
+	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
+	if $HUD/CurrentScore > $HUD/HighScore:
+		$HUD/HighScore.text = str(GlobalVariables.scoringInformation["currentScore"])
