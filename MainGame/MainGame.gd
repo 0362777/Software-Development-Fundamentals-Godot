@@ -17,4 +17,4 @@ func _ready():
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if $HUD/CurrentScore > $HUD/HighScore:
-		$HUD/HighScore.text = str(GlobalVariables.scoringInformation["currentScore"])
+		$HUD/HighScore.text = $HUD/CurrentScore.text
